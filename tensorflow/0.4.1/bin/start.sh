@@ -1,0 +1,9 @@
+#!/bin/bash
+export TENSORFLOW_HOME=~/tensorflow-$TENSORFLOW_VERSION
+export TENSORFLOW_SERVING_HOME=~/serving
+export BAZEL_HOME=~/bazel-$BAZEL_VERSION
+export PATH=$TENSORFLOW_HOME:$TENSORFLOW_SERVING_HOME/bin:$BAZEL_HOME/bin:$PATH
+
+# TODO:  Start tensorflow serving
+
+tail -f tensorflow-serving.log
