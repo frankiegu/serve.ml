@@ -1,6 +1,5 @@
 FROM fluxcapacitor/utils-ubuntu-14.04
 FROM fluxcapacitor/utils-java-1.8
-FROM fluxcapacitor/utils-kafka-0.10
 
 WORKDIR /root
 
@@ -67,6 +66,6 @@ RUN \
 #  && bazel build //tensorflow_serving/example:mnist_client \
 #  && bazel build //tensorflow_serving/example:mnist_export
 
-COPY bin/ bin/
+COPY run run
 
-CMD ["bin/start.sh"]
+CMD ["./run"]
