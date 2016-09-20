@@ -6,7 +6,7 @@ Based on NetflixOSS [Dynomite](https://github.com/Netflix/) + [Spark ML](http://
 # Spark ML Serving
 ## Start Docker Container
 ```
-docker run -itd --name=sparkml-serving --privileged --net=host -p 9040:9040 fluxcapacitor/sparkml-serving
+docker run -itd --name=sparkml-serving --privileged --net=host -p 9040:9040 fluxcapacitor/serve-sparkml
 ```
 
 ## Verify Successful Start through Logs
