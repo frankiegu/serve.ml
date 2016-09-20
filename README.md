@@ -35,7 +35,7 @@ docker build -t fluxcapacitor/sparkml-serving .
 # TensorFlow Serving
 ## Start Docker Container
 ```
-docker run -itd --name=serve --privileged --net=host -p 9040:9040 fluxcapacitor/tensorflow-serving
+docker run -itd --name=serve --privileged --net=host -p 9040:9040 fluxcapacitor/serve-tensorflow
 ```
 
 ## Verify Successful Start through Logs
