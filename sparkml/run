@@ -1,0 +1,17 @@
+#!/bin/bash
+
+###################################################################################################
+# NOTE:  THIS SCRIPT MUST NOT EXIT OR ELSE PID 1 WILL DIE AND THE DOCKER CONTAINER WILL DIE
+#        RIGHT NOW, WE'RE RELYING ON THE VERY LAST LINE OF start-serving-services.sh TO STAY ALIVE
+###################################################################################################
+
+./start-all-serving-services.sh
+
+sleep 5
+
+./start-all-prediction-services.sh
+
+###################################################################################################
+# NOTE:  THIS SCRIPT MUST NOT EXIT OR ELSE PID 1 WILL DIE AND THE DOCKER CONTAINER WILL DIE
+#        RIGHT NOW, WE'RE RELYING ON THE VERY LAST LINE TO STAY ALIVE
+###################################################################################################
