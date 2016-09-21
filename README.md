@@ -6,12 +6,12 @@ Based on NetflixOSS [Dynomite](https://github.com/Netflix/) + [Spark ML](http://
 # Spark ML Serving
 ## Start Docker Container
 ```
-docker run -itd --name=serve-spark-2.0.1 --privileged --net=host -p 9040:9040 fluxcapacitor/serve-spark-2.0.1
+docker run -itd --name=serve-jvm --privileged --net=host -p 9040:9040 fluxcapacitor/serve-jvm
 ```
 
 ## Verify Successful Start through Logs
 ```
-docker logs -f serve-spark-2.0.1
+docker logs -f serve-jvm
 ```
 
 ## Verify Successful Start through Kafka REST API
@@ -26,9 +26,9 @@ TODO:
 
 ## (Optional) Build new Docker Image
 ```
-cd spark/2.0.1
+cd jvm
 
-docker build -t fluxcapacitor/serve-spark-2.0.1 .
+docker build -t fluxcapacitor/serve-jvm .
 ```
 
 
@@ -43,7 +43,7 @@ docker run -itd --name=serve-tensorflow-0.4.1 --privileged --net=host -p 9040:90
 docker logs -f serve-tensorflow-0.4.1
 ```
 
-## Verify Successful Start through REST API
+## Verify Successful Start through gRPC API
 ```
 TODO: 
 
